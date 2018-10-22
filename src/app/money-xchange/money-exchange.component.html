@@ -1,0 +1,38 @@
+<div class="card-header">
+    <div class="row">
+        <div class="col-md-2"></div>  
+        <div class="col-md-8">
+            <div class="card-body">
+                <div class="row mt-5 mb-4">
+                    <div class="col-md-6 p-2">
+                        <input type="text" class="form-control text-center" currencyMask
+                               placeholder="{{ baseCurrencyCode }}" #focus
+                               (ngModelChange)="reset()"
+                               (keyup.enter) = "calculate()"
+                               [(ngModel)]="baseAmount"
+                               [options]="baseMaskOptions"/>
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <input type="text" class="form-control text-center" currencyMask
+                               placeholder="{{ conversionCurrencyCode }}"
+                               readonly="true"
+                               [(ngModel)]="conversionAmount" 
+                               [options]="conversionMaskOptions"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"></div>  
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-primary w-100" 
+                                [disabled]="disable()" 
+                                (click)="calculate()" >
+                            <span>{{ buttonText }}</span>
+                        </button>
+                    </div>
+                    <div class="col-md-4"></div>                    
+                </div>            
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

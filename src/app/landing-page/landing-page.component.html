@@ -1,0 +1,10 @@
+<wireframe-app>
+    <money-exchange-app
+        [baseCurrencyCode]="baseCurrencyCode"
+        [baseCurrencySymbol]="baseCurrencySymbol"
+        [conversionCurrencyCode]="conversionCurrencyCode"
+        [conversionCurrencySymbol]="conversionCurrencySymbol"
+        [conversionAmount]="conversionAmount"
+        (calculate)="calculateConversion($event)">
+    </money-exchange-app>
+</wireframe-app>
