@@ -35,6 +35,7 @@ export class LandingPageComponent {
         this.conversionCurrencySymbol =  Constants.MONEY_XCHANGE_CURRENCY.Symbol.US;
         this.currencyCacheKey = Constants.MONEY_XCHANGE_SERVICE.CacheKey.EuropeToUSCurrency;
     }
+	
     /**
      * Se invoca el servicio de tipo de cambio y se guarda el resultado en caché.
      * Las siguientes peticiones obtendrán el resultado de caché por 10 minutos. 
@@ -46,7 +47,6 @@ export class LandingPageComponent {
                 getLatest(request))
                 .subscribe((response: MoneyXchangeResponse) =>  {
                     this.conversionAmount = response.success ? request.baseAmount * response.rate : 0;
-                    return this.conversionAmount;
                 });
     }
 }
