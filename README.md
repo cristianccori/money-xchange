@@ -11,8 +11,7 @@ Ubicarse en el proyecto enviado a través del comando:
 >cd D:\MoneyXchange
 
 Intalar las librerías con Yarn (recomendado) o NPM:
-> yarn install
-> npm install
+> yarn install / npm install
 
 Compilar el TyoeScript e iniciar la web SPA:
 > ng serve
