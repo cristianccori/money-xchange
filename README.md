@@ -1,4 +1,4 @@
-# MoneyXchange: Prueba Técnica Belatrix
+# MoneyXchange
 
 Este proyecto ha sido creado con Angular CLI y Angular 4. Se utilizó Yarn para congelar la versión de las librerías necesarias.
 Se debe instalar el Node JS y NPM de la siguiente Url:
